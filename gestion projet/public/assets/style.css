@@ -1,0 +1,157 @@
+/* ─── RESET ──────────────────────────────────────────────────────────────── */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ─── BODY ───────────────────────────────────────────────────────────────── */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #111;       /* dark black background */
+    color: #f0f0f0;               /* white text */
+    padding: 20px;
+}
+
+/* ─── TITLES ─────────────────────────────────────────────────────────────── */
+h1, h2, h3 {
+    color: #e63333;               /* red color for titles */
+    margin-bottom: 15px;
+}
+
+/* ─── LINKS ──────────────────────────────────────────────────────────────── */
+a {
+    color: #e63333;               /* red links */
+    text-decoration: none;
+    transition: color 0.3s;       /* smooth color change on hover */
+}
+
+a:hover {
+    color: #ff6666;               /* lighter red on hover */
+}
+
+/* ─── NAVBAR ─────────────────────────────────────────────────────────────── */
+nav, .navbar {
+    background-color: #1a1a1a;   /* dark bar */
+    padding: 12px 20px;
+    border-bottom: 2px solid #e63333; /* red line at bottom */
+    margin-bottom: 20px;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+/* ─── FORMS ──────────────────────────────────────────────────────────────── */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    max-width: 400px;
+    margin-top: 15px;
+}
+
+/* ─── INPUTS ─────────────────────────────────────────────────────────────── */
+input {
+    padding: 10px 14px;
+    border: 1px solid #444;
+    border-radius: 6px;
+    background-color: #1e1e1e;   /* dark input */
+    color: #f0f0f0;              /* white text inside */
+    font-size: 15px;
+    transition: border 0.3s;     /* smooth border change on focus */
+}
+
+input:focus {
+    outline: none;
+    border-color: #e63333;       /* red border when typing */
+}
+
+/* ─── BUTTONS ────────────────────────────────────────────────────────────── */
+button, .btn {
+    padding: 10px 20px;
+    background-color: #e63333;   /* red button */
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s; /* smooth hover + click */
+}
+
+button:hover, .btn:hover {
+    background-color: #c0392b;   /* darker red on hover */
+}
+
+button:active, .btn:active {
+    transform: scale(0.97);      /* small click effect */
+}
+
+/* ─── CARDS (events) ─────────────────────────────────────────────────────── */
+.card, div > div {
+    background-color: #1a1a1a;  /* dark card */
+    border: 1px solid #333;
+    border-left: 4px solid #e63333; /* red left border accent */
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    animation: fadeIn 0.4s ease; /* fade in animation when page loads */
+}
+
+/* ─── FADE IN ANIMATION ──────────────────────────────────────────────────── */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px); /* slide up from below */
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ─── ERROR MESSAGES ─────────────────────────────────────────────────────── */
+.error, p.error {
+    color: #ff4444;              /* bright red for errors */
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+/* ─── SUCCESS MESSAGES ───────────────────────────────────────────────────── */
+p[style*="green"] {
+    color: #44cc77 !important;   /* green for success */
+}
+
+/* ─── SOLD OUT ───────────────────────────────────────────────────────────── */
+.sold {
+    color: #ff4444;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* ─── HR LINE ────────────────────────────────────────────────────────────── */
+hr {
+    border: none;
+    border-top: 1px solid #333;
+    margin: 20px 0;
+}
+
+/* ─── PAGE LOAD ANIMATION ────────────────────────────────────────────────── */
+body {
+    animation: pageLoad 0.5s ease;
+}
+
+@keyframes pageLoad {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* ─── LISTS (error list in signup) ──────────────────────────────────────── */
+ul {
+    padding-left: 20px;
+    color: #ff4444;
+    margin-bottom: 15px;
+}
+
+ul li {
+    margin-bottom: 5px;
+}
